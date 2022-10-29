@@ -1,0 +1,32 @@
+
+
+  <div class="mx-auto">
+    <div class="container">
+        <div class="row">
+            <form [formGroup]="loginForm" (ngSubmit)="login()">
+            <div class="col-6">
+                <h1 class="mt-2 mb-3">Login</h1>
+                <div class="form-group">
+                    <label for="uname"><b>Username</b></label>
+                    <input type="text" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['uname'].errors }" placeholder="Enter Username" name="uname" formControlName="uname" required>
+              <div *ngIf="submitted && f['uname'].errors" class="invalid-feedback">
+                <div *ngIf="f['uname'].errors['required']">Username is required</div>
+              </div>
+                </div>
+                <div class="form-group mt-2">
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['psw'].errors }" placeholder="Enter Password" name="psw" formControlName="psw" required>
+                    <div *ngIf="submitted && f['psw'].errors" class="invalid-feedback">
+                        <div *ngIf="f['psw'].errors['required']">Password is required</div>
+                      </div>  
+            </div>
+                <button type="submit" class="btn btn-primary mt-3">Login</button>
+            </div>
+        </form>
+        </div>
+    
+      
+    </div>
+
+</div>
+

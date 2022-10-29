@@ -1,0 +1,57 @@
+<div class="container">
+    <!-- <h1>
+  
+    <a href="#" routerLink="/post/index" class="btn btn-primary">Back</a> Create New User</h1> -->
+
+
+<div class="mt-1">
+    <form [formGroup]="form" (ngSubmit)="submit()">
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group mt-2">
+                    <label for="Email">Email:</label>
+                    <input 
+                        formControlName="email"
+                        id="email" 
+                        type="text" 
+                        class="form-control">
+                </div>
+          
+                <div class="form-group mt-2">
+                    <label for="body">First Name:</label>
+                    <input 
+                        formControlName="first_name"
+                        id="first_name" 
+                        type="text" 
+                        class="form-control">
+                
+                </div>
+        
+                <div class="form-group mt-2">
+                    <label for="body">Last Name:</label>
+                    <input 
+                        formControlName="last_name"
+                        id="last_name" 
+                        type="text" 
+                        class="form-control">
+                
+                </div>
+
+                <div class="form-group mt-2">
+                    <label for="body">Upload Profile Pic:</label>
+                    <input 
+                        formControlName="avatar"
+                        id="avatar" 
+                        type="file" 
+                        class="form-control">
+                
+                </div>
+            </div>
+        </div>
+  
+        
+  
+        <button class="btn btn-success mt-3" type="submit" [disabled]="!form.valid">Submit</button>
+    </form>
+</div>
+</div>
